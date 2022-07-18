@@ -1,4 +1,6 @@
-var p1 = Math.random()*6;
+function play()
+{
+    var p1 = Math.random()*6;
 var p2 = Math.random()*6;
 p1= Math.floor(p1) + 1 ;
 p2= Math.floor(p2) + 1;
@@ -17,6 +19,9 @@ else if(p1 > p2){
 else{
     document.querySelector(".heading").textContent="Player 2 Wins !!";
 }
+}
 function refresh(){
     window.location.reload();
 }
+document.querySelector("button").addEventListener("click", play);
+setTimeout(refresh,10000);
